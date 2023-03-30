@@ -8,6 +8,8 @@ from dataclasses import dataclass
 from src.exception import CustomException
 from src.logger import logging
 
+os.getcwd()
+
 @dataclass
 class DataIngestionConfig:
     
@@ -26,7 +28,8 @@ class DataIngestion:
         logging.info("Entered the data ingestion method or component")
         
         try:
-
+            
+            # logging.info(f"path : {os.getcwd()}")
             df = pd.read_csv("notebook\data\stud.csv")
             logging.info("Read the datasetas dataframe")
 
